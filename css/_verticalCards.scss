@@ -1,0 +1,30 @@
+#cardsArea {
+    overflow: hidden;
+
+    #VerticalList{
+        /* width: 999999px;  */     
+    }
+    
+}
+
+.VerticalCard{
+    display: inline-block;
+    width: 28rem;
+    height: 46rem;
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+              
+    }
+
+    :hover{
+        width: 33rem;
+        height: 50rem;
+        position: absolute;
+        z-index: 2;
+        transition: all 1s;
+        
+        box-shadow: 1rem black;
+    }
+}

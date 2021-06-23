@@ -1,0 +1,259 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+html {
+  /* a cada 1rem será considera 10px */
+  font-size: 62.5%;
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+#container {
+  background: #3A3958;
+}
+
+div .content {
+  height: 9999px;
+  padding: 3rem 0 0 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+#bigCover {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://wallpaperaccess.com/full/1086024.jpg);
+}
+
+#bigCover div .tittleHolder {
+  position: absolute;
+  z-index: 2;
+  width: 70rem;
+  height: 20rem;
+  background-color: #FAFA5E;
+}
+
+#bigCover div .tittleHolder a {
+  font-size: 50rem;
+  color: #FAFA5E;
+}
+
+#tittleHolder {
+  position: absolute;
+  z-index: 2;
+  top: 50vh;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 94rem;
+  height: 5rem;
+  background-color: #3A3958;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#tittleHolder :hover {
+  width: 100rem;
+}
+
+#tittle {
+  font-family: "Poppins", sans-serif;
+  font-size: 9rem;
+  color: #FAFA5E;
+  font-weight: bold;
+  margin-top: -6rem;
+}
+
+#tittle :hover {
+  font-size: 12rem;
+  -webkit-box-shadow: 10px black;
+          box-shadow: 10px black;
+}
+
+main {
+  margin-top: 3rem;
+  height: 99999px;
+  width: 999999px;
+}
+
+div .arrow-left, div .arrow-right {
+  position: absolute;
+  width: 4rem;
+  height: 46rem;
+  z-index: 90;
+  background-color: rgba(254, 252, 141, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+div .arrow-left img, div .arrow-right img {
+  width: 6rem;
+  height: 3rem;
+}
+
+.arrow-left {
+  left: 2vw;
+}
+
+.arrow-right {
+  right: 0;
+}
+
+.cards :hover, .arrow-left {
+  opacity: 1;
+}
+
+div .cards {
+  margin-bottom: 3rem;
+}
+
+div .cards h2 {
+  color: #FEFC8D;
+}
+
+#cardsArea {
+  overflow: hidden;
+}
+
+#cardsArea #VerticalList {
+  /* width: 999999px;  */
+}
+
+.VerticalCard {
+  display: inline-block;
+  width: 28rem;
+  height: 46rem;
+}
+
+.VerticalCard img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.VerticalCard :hover {
+  width: 33rem;
+  height: 50rem;
+  position: absolute;
+  z-index: 2;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-box-shadow: 1rem black;
+          box-shadow: 1rem black;
+}
+
+#horizontalCards {
+  overflow-x: hidden;
+}
+
+#horizontalCards #horizontallList {
+  width: 999999px;
+}
+
+.HorizontalCard {
+  display: inline-block;
+  width: 36rem;
+  height: 17rem;
+}
+
+.HorizontalCard img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.HorizontalCard :hover {
+  width: 38rem;
+  height: 25rem;
+  position: absolute;
+  z-index: 2;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-box-shadow: 1rem black;
+          box-shadow: 1rem black;
+}
+
+header {
+  position: fixed;
+  z-index: 22;
+  height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Logo {
+  color: #FAFA5E;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#menu {
+  display: block;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#menu a {
+  color: #FEFC8D;
+  font-size: 1.563rem;
+  font-family: 'open sans', sans-serif;
+  font-weight: 600;
+  margin: 0 0.8em;
+}
+/*# sourceMappingURL=main.css.map */
