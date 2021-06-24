@@ -105,9 +105,7 @@ div .content {
 }
 
 main {
-  margin-top: 3rem;
-  height: 99999px;
-  width: 999999px;
+  margin-top: 5rem;
 }
 
 div .arrow-left, div .arrow-right {
@@ -132,19 +130,49 @@ div .arrow-left, div .arrow-right {
 }
 
 div .arrow-left img, div .arrow-right img {
-  width: 6rem;
+  width: 3rem;
   height: 3rem;
 }
 
-.arrow-left {
+div .arrow-left-horizontal, div .arrow-right-horizontal {
+  position: absolute;
+  width: 4rem;
+  height: 17rem;
+  z-index: 90;
+  background-color: rgba(254, 252, 141, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+div .arrow-left-horizontal img, div .arrow-right-horizontal img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.arrow-left, .arrow-left-horizontal {
   left: 2vw;
 }
 
-.arrow-right {
+.arrow-right, .arrow-right-horizontal {
   right: 0;
 }
 
 .cards :hover, .arrow-left {
+  opacity: 1;
+}
+
+.cards :hover, .arrow-left, .arrow-left-horizontal {
   opacity: 1;
 }
 
@@ -160,45 +188,54 @@ div .cards h2 {
   overflow: hidden;
 }
 
-#cardsArea #VerticalList {
-  /* width: 999999px;  */
+div .VerticallList {
+  width: 2770rem;
+  -webkit-transition: all ease 400ms;
+  transition: all ease 400ms;
 }
 
 .VerticalCard {
   display: inline-block;
   width: 28rem;
   height: 46rem;
+  -webkit-transition: all ease 1000ms;
+  transition: all ease 1000ms;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .VerticalCard img {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
+  background-size: cover !important;
 }
 
-.VerticalCard :hover {
-  width: 33rem;
-  height: 50rem;
-  position: absolute;
-  z-index: 2;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  -webkit-box-shadow: 1rem black;
-          box-shadow: 1rem black;
+.VerticalCard:hover {
+  background: #000;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
+          box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
+  border-radius: 1.5rem;
 }
 
 #horizontalCards {
   overflow-x: hidden;
 }
 
-#horizontalCards #horizontallList {
-  width: 999999px;
+div .cardsList {
+  width: 400rem;
 }
 
 .HorizontalCard {
   display: inline-block;
   width: 36rem;
   height: 17rem;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all ease 1000ms;
+  transition: all ease 1000ms;
 }
 
 .HorizontalCard img {
@@ -207,21 +244,21 @@ div .cards h2 {
   border-radius: 1rem;
 }
 
-.HorizontalCard :hover {
-  width: 38rem;
-  height: 25rem;
-  position: absolute;
-  z-index: 2;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  -webkit-box-shadow: 1rem black;
-          box-shadow: 1rem black;
+.HorizontalCard:hover {
+  z-index: 22;
+  background: #000;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
+          box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
+  border-radius: 1.5rem;
 }
 
 header {
   position: fixed;
   z-index: 22;
-  height: 5%;
+  width: 90%;
+  height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,7 +277,9 @@ header {
 }
 
 #menu {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -255,5 +294,13 @@ header {
   font-family: 'open sans', sans-serif;
   font-weight: 600;
   margin: 0 0.8em;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+#menu a:hover {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #FAFA5E;
 }
 /*# sourceMappingURL=main.css.map */

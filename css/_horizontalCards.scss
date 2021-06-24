@@ -1,31 +1,30 @@
 #horizontalCards {
     overflow-x: hidden;
-
-    #horizontallList{
-        width: 999999px;      
-    }
-    
-    
+   
 }
 
+div .cardsList{
+    width: 400rem;      
+}
 .HorizontalCard{
     display: inline-block;
     width: 36rem;
     height: 17rem;
+
+    transform:scale(0.95);
+    transition: all ease 1000ms;
     img{
         width: 100%;
         height: 100%;
         border-radius: 1rem;
               
     }
+}
 
-    :hover{
-        width: 38rem;
-        height: 25rem;
-        position: absolute;
-        z-index: 2;
-        transition: all 1s;
-        
-        box-shadow: 1rem black;
-    }
+.HorizontalCard:hover{
+    z-index: 22;
+    background: #000;
+    transform: scale(1);
+    box-shadow: 10px -10px 5px  rgba(86, 85, 128,0.6);
+    border-radius: 1.5rem;
 }

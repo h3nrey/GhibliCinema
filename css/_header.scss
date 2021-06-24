@@ -1,7 +1,8 @@
 header {
     position:fixed;
     z-index: 22;
-    height: 5%;
+    width: 90%;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,10 +12,11 @@ header {
     color: $text-color-strong;
     font-size: 3rem;
     font-weight: bold;
+    //text-shadow: 2rem  0px 10px black;
 }
 
 #menu{
-    display: block;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 
@@ -24,6 +26,14 @@ header {
         font-family: 'open sans', sans-serif;
         font-weight: 600;
         margin: 0 0.8em;
+        transition: 400ms;
     } 
+
+    
 }
 
+#menu a:hover{
+    font-size: 4rem;
+    font-weight: 800;
+    color: $text-color-strong;
+}
