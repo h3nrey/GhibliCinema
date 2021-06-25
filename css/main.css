@@ -347,15 +347,17 @@ header {
 .bgCoverContainer #tittleHolder a {
   color: #FAFA5E;
   font-family: "Poppins", sans-serif;
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 900;
   margin-top: -6rem;
   -webkit-transition: all ease 1000ms;
   transition: all ease 1000ms;
+  text-align: center;
 }
 
 a#titulo:hover {
-  font-size: 10rem;
+  font-size: 8rem;
+  color: #3A3958;
   position: absolute;
 }
 

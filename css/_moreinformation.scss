@@ -46,11 +46,11 @@
         a{
             color: $text-color-strong;
             font-family: "Poppins", sans-serif;
-            font-size: 8rem;
+            font-size: 6rem;
             font-weight: 900;
             margin-top: -6rem;
             transition: all ease 1000ms;
-
+            text-align: center;
             
         }
     }
@@ -60,8 +60,8 @@
 }
 
 a#titulo:hover{
-    font-size: 10rem;
-    
+    font-size: 8rem;
+    color: $bg-color-primary;
     position: absolute;
 }
 
