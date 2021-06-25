@@ -1,5 +1,5 @@
 #cardsArea {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 div .VerticallList{
@@ -11,21 +11,27 @@ div .VerticallList{
     display: inline-block;
     width: 28rem;
     height: 46rem;
+    z-index: 1;
 
     transition: all ease 1000ms;
-    transform: scale(0.9);
+    transform: scale(1);
     img{
         width: 100%;
         height: 100%;
         border-radius: 1rem;
         background-size: cover !important;
-              
+
+        img:hover {
+            background-color: black;
+        }
     }
 }
 
 .VerticalCard:hover{
-    background: #000;
-    transform: scale(1);
+    transform: scale(0.9);
+    position:inherit;
+    z-index: 22;
     box-shadow: 10px -10px 5px  rgba(86, 85, 128,0.6);
     border-radius: 1.5rem;
+    
 }

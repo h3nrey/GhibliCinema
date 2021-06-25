@@ -29,7 +29,7 @@ body {
 }
 
 div .content {
-  height: 9999px;
+  height: 1600px;
   padding: 3rem 0 0 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,6 +106,8 @@ div .content {
 
 main {
   margin-top: 5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 div .arrow-left, div .arrow-right {
@@ -185,7 +187,7 @@ div .cards h2 {
 }
 
 #cardsArea {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 div .VerticallList {
@@ -198,10 +200,11 @@ div .VerticallList {
   display: inline-block;
   width: 28rem;
   height: 46rem;
+  z-index: 1;
   -webkit-transition: all ease 1000ms;
   transition: all ease 1000ms;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .VerticalCard img {
@@ -211,10 +214,15 @@ div .VerticallList {
   background-size: cover !important;
 }
 
+.VerticalCard img img:hover {
+  background-color: black;
+}
+
 .VerticalCard:hover {
-  background: #000;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  position: inherit;
+  z-index: 22;
   -webkit-box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
           box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
   border-radius: 1.5rem;
@@ -226,14 +234,16 @@ div .VerticallList {
 
 div .cardsList {
   width: 400rem;
+  -webkit-transition: all ease 1000ms;
+  transition: all ease 1000ms;
 }
 
 .HorizontalCard {
   display: inline-block;
   width: 36rem;
   height: 17rem;
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: all ease 1000ms;
   transition: all ease 1000ms;
 }
@@ -247,8 +257,8 @@ div .cardsList {
 .HorizontalCard:hover {
   z-index: 22;
   background: #000;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
   -webkit-box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
           box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
   border-radius: 1.5rem;
@@ -257,7 +267,7 @@ div .cardsList {
 header {
   position: fixed;
   z-index: 22;
-  width: 90%;
+  width: 100%;
   height: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,12 +278,21 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #3A3958;
+  top: 0;
 }
 
 #Logo {
   color: #FAFA5E;
   font-size: 3rem;
   font-weight: bold;
+  -webkit-transition: all ease 2000ms;
+  transition: all ease 2000ms;
+}
+
+#Logo:hover {
+  font-size: 4rem;
+  letter-spacing: 1.2rem;
 }
 
 #menu {
@@ -286,6 +305,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 10rem;
 }
 
 #menu a {
