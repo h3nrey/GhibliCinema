@@ -1,7 +1,8 @@
 #container{
 
     background: $bg-color-primary;
-    
+    background-image: url('https://i.pinimg.com/originals/02/82/3c/02823cbfd3b547999b18a69cc0c1e6bb.gif');
+    background-size: 5%;
 }
 
 div .content{
@@ -37,37 +38,4 @@ div .content{
             color: $text-color-strong;
         }
     }
-}
-
-#tittleHolder{
-    position: absolute;
-    z-index: 2;
-    top: 50vh;
-    left:50%;
-    transform: translate(-50%);
-    width: 94rem;
-    height: 5rem;
-    background-color: $bg-color-primary;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    
-    :hover{
-        width: 100rem;
-    }
-}
-
-#tittle{
-    font-family: "Poppins", sans-serif;
-    font-size: 9rem;
-    color: $text-color-strong;
-    font-weight: bold;
-    margin-top: -6rem;
-
-    
-}
-
-#tittle :hover{
-    font-size: 12rem;
-    box-shadow: 10px black;
 }

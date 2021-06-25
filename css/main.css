@@ -26,6 +26,8 @@ body {
 
 #container {
   background: #3A3958;
+  background-image: url("https://i.pinimg.com/originals/02/82/3c/02823cbfd3b547999b18a69cc0c1e6bb.gif");
+  background-size: 5%;
 }
 
 div .content {
@@ -63,45 +65,6 @@ div .content {
 #bigCover div .tittleHolder a {
   font-size: 50rem;
   color: #FAFA5E;
-}
-
-#tittleHolder {
-  position: absolute;
-  z-index: 2;
-  top: 50vh;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  width: 94rem;
-  height: 5rem;
-  background-color: #3A3958;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#tittleHolder :hover {
-  width: 100rem;
-}
-
-#tittle {
-  font-family: "Poppins", sans-serif;
-  font-size: 9rem;
-  color: #FAFA5E;
-  font-weight: bold;
-  margin-top: -6rem;
-}
-
-#tittle :hover {
-  font-size: 12rem;
-  -webkit-box-shadow: 10px black;
-          box-shadow: 10px black;
 }
 
 main {
@@ -278,14 +241,17 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #3A3958;
   top: 0;
+  left: 5rem;
 }
 
 #Logo {
   color: #FAFA5E;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
   -webkit-transition: all ease 2000ms;
   transition: all ease 2000ms;
 }
@@ -314,13 +280,267 @@ header {
   font-family: 'open sans', sans-serif;
   font-weight: 600;
   margin: 0 0.8em;
-  -webkit-transition: 400ms;
-  transition: 400ms;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
 }
 
 #menu a:hover {
   font-size: 4rem;
-  font-weight: 800;
   color: #FAFA5E;
+}
+
+#m-container {
+  height: 180vh;
+  background-color: #3A3958;
+  overflow-x: hidden;
+  width: 100vw;
+  background-image: url("https://i.pinimg.com/originals/02/82/3c/02823cbfd3b547999b18a69cc0c1e6bb.gif") to;
+  background-size: 5%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.m-content {
+  margin-left: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bgCoverContainer {
+  width: 100%;
+  height: 90vh;
+}
+
+.bgCoverContainer img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bgCoverContainer #tittleHolder {
+  position: fixed;
+  z-index: 1;
+  margin-left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-55%);
+          transform: translateX(-55%);
+  width: 100%;
+  height: 10rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bgCoverContainer #tittleHolder a {
+  color: #FAFA5E;
+  font-family: "Poppins", sans-serif;
+  font-size: 8rem;
+  font-weight: 900;
+  margin-top: -6rem;
+  -webkit-transition: all ease 1000ms;
+  transition: all ease 1000ms;
+}
+
+a#titulo:hover {
+  font-size: 10rem;
+  position: absolute;
+}
+
+#more-information {
+  border-radius: 2rem 2rem 0 0;
+  padding: 0 2rem 0 2rem;
+  width: 98%;
+  height: 90vh;
+  background: #3A3958;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  overflow: hidden;
+}
+
+#more-information #vertical-cover-holder {
+  width: 36.5rem;
+  height: 53.2rem;
+  border-radius: 1rem;
+}
+
+#more-information #vertical-cover-holder img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+}
+
+#more-information #sinopseContainer {
+  width: 48rem;
+  height: 53.2rem;
+  border-radius: 0 1rem 1rem 0;
+  margin-top: 12%;
+}
+
+#more-information #sinopseContainer .spacing {
+  height: 31rem;
+}
+
+#more-information #sinopseContainer .sinopseholder h2 {
+  font-size: 4rem;
+  color: #FAFA5E;
+}
+
+#more-information #sinopseContainer .sinopseText {
+  background: #3A3958;
+  width: 100%;
+  height: 23rem;
+  border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#more-information #sinopseContainer .sinopseText p {
+  font-family: 'open-sans', sans-serif;
+  font-weight: 500;
+  font-size: 2.1rem;
+  color: #FEFC8D;
+  width: 95%;
+  letter-spacing: 5%;
+}
+
+#tecnicalsheet {
+  width: 33.8rem;
+  height: 53.2rem;
+  overflow: hidden;
+}
+
+#tecnicalsheet h2 {
+  font-size: 3.2rem;
+  color: #FAFA5E;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+#tecnicalsheet .table {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0.4rem;
+  background-color: #FAFA5E;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tecnicalsheet .table h3 {
+  color: #3A3958;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+#tecnicalsheet .table h4 {
+  margin-bottom: 1rem;
+  color: #565580;
+  font-size: 1.6rem;
+}
+
+#tecnicalsheet .table .tabledata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tecnicalsheet .table .tabledata .darkblock {
+  background: #3A3958;
+  height: 3.2rem;
+  width: 32rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 1rem 0 1rem;
+}
+
+#tecnicalsheet .table .tabledata .darkblock div {
+  font-size: 1.3rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #FAFA5E;
+  font-weight: 600;
+}
+
+#tecnicalsheet .table .tabledata .darkblock div:nth-child(1) {
+  color: #FEFC8D;
+  font-size: 1.8rem;
+}
+
+#tecnicalsheet .table .tabledata .darkblock div:nth-child(2) {
+  width: 34%;
+}
+
+#tecnicalsheet .table .tabledata .darkblock:nth-child(7), #tecnicalsheet .table .tabledata .darkblock:nth-child(15) {
+  padding-top: 1rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+#tecnicalsheet .table .tabledata .darkblock:nth-child(7) {
+  height: 6.4rem;
+}
+
+#tecnicalsheet .table .tabledata .darkblock:nth-child(15) {
+  height: 9.4rem;
+}
+
+#tecnicalsheet .table .tabledata .darkblock:nth-child(4) {
+  color: #FAFA5E;
+}
+
+#tecnicalsheet .table .tabledata .lighteenblock {
+  background-color: #565580;
+  height: 1rem;
+  width: 27rem;
 }
 /*# sourceMappingURL=main.css.map */
