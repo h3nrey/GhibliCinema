@@ -289,6 +289,94 @@ header {
   color: #FAFA5E;
 }
 
+div#video-container {
+  width: 100vw;
+  height: 100vh;
+  background: #3A3958;
+  background-image: url("https://i.pinimg.com/originals/02/82/3c/02823cbfd3b547999b18a69cc0c1e6bb.gif");
+  background-size: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation-name: fundo;
+          animation-name: fundo;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: reverse;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+div#video-container #video-holder {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div#video-container #video-holder a {
+  color: #FAFA5E;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+div#video-container #video-holder a:hover {
+  color: #565580;
+}
+
+@-webkit-keyframes fundo {
+  0% {
+    background-position-x: 0%;
+  }
+  25% {
+    background-position-x: 25px;
+  }
+  50% {
+    background-position-x: 50px;
+  }
+  75% {
+    background-position-x: 75px;
+  }
+  100% {
+    background-position-x: 100px;
+  }
+}
+
+@keyframes fundo {
+  0% {
+    background-position-x: 0%;
+  }
+  25% {
+    background-position-x: 25px;
+  }
+  50% {
+    background-position-x: 50px;
+  }
+  75% {
+    background-position-x: 75px;
+  }
+  100% {
+    background-position-x: 100px;
+  }
+}
+
 #m-container {
   height: 180vh;
   background-color: #3A3958;
