@@ -100,7 +100,6 @@ function changeLink() {
         default:
             break;
     }
-    alert("mudou")
 }
 
 changeLink();
