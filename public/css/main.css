@@ -6,6 +6,10 @@
   padding: 0;
   outline: 0;
   text-decoration: none;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
 }
 
 html {
@@ -164,8 +168,8 @@ div .VerticallList {
   width: 28rem;
   height: 46rem;
   z-index: 1;
-  -webkit-transition: all ease 1000ms;
-  transition: all ease 1000ms;
+  -webkit-transition: all ease 400ms;
+  transition: all ease 400ms;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -186,8 +190,8 @@ div .VerticallList {
           transform: scale(0.9);
   position: inherit;
   z-index: 22;
-  -webkit-box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
-          box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
+  -webkit-box-shadow: 0 0 10px 10px rgba(86, 85, 128, 0.6);
+          box-shadow: 0 0 10px 10px rgba(86, 85, 128, 0.6);
   border-radius: 1.5rem;
 }
 
@@ -207,8 +211,8 @@ div .cardsList {
   height: 17rem;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: all ease 1000ms;
-  transition: all ease 1000ms;
+  -webkit-transition: all ease 400ms;
+  transition: all ease 400ms;
 }
 
 .HorizontalCard img {
@@ -222,8 +226,8 @@ div .cardsList {
   background: #000;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-  -webkit-box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
-          box-shadow: 10px -10px 5px rgba(86, 85, 128, 0.6);
+  -webkit-box-shadow: 0 0 10px 10px rgba(86, 85, 128, 0.6);
+          box-shadow: 0 0 10px 10px rgba(86, 85, 128, 0.6);
   border-radius: 1.5rem;
 }
 
@@ -252,13 +256,12 @@ header {
   font-family: 'Poppins', sans-serif;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
-  -webkit-transition: all ease 2000ms;
-  transition: all ease 2000ms;
+  -webkit-transition: all ease 400ms;
+  transition: all ease 400ms;
 }
 
 #Logo:hover {
-  font-size: 4rem;
-  letter-spacing: 1.2rem;
+  font-size: 3.5rem;
 }
 
 #menu {
@@ -492,7 +495,7 @@ a#titulo:hover {
 }
 
 #more-information #sinopseContainer .spacing {
-  height: 31rem;
+  height: 45% !important;
 }
 
 #more-information #sinopseContainer .sinopseholder h2 {

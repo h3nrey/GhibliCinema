@@ -13,7 +13,7 @@ div .VerticallList{
     height: 46rem;
     z-index: 1;
 
-    transition: all ease 1000ms;
+    transition: all ease 400ms;
     transform: scale(1);
     img{
         width: 100%;
@@ -31,7 +31,7 @@ div .VerticallList{
     transform: scale(0.9);
     position:inherit;
     z-index: 22;
-    box-shadow: 10px -10px 5px  rgba(86, 85, 128,0.6);
+    box-shadow: 0 0 10px 10px  rgba(86, 85, 128,0.6);
     border-radius: 1.5rem;
     
 }

@@ -18,12 +18,11 @@ header {
     font-family: 'Poppins', sans-serif;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
-    transition: all ease 2000ms;
+    transition: all ease 400ms;
 }
 
 #Logo:hover{
-    font-size: 4rem;
-    letter-spacing: 1.2rem;
+    font-size: 3.5rem;
 }
 #menu{
     display: flex;
