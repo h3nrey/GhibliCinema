@@ -24,15 +24,15 @@
             </header>
 
                 <div class="bgCoverContainer">
-                    <img id="bgCover" src="https://images3.alphacoders.com/748/thumb-1920-748308.png" alt="">
+                    <img id="bgCover" src=<%-movie.movie_banner%> alt="">
                     <div id="tittleHolder">
-                        <a id="titulo" href=<%=`/watch/${movie.id}`%>> <%=movie.tittle%> </a>
+                        <a id="titulo" href="/watch/<%-movie.id%>"><%=movie.title%> </a>
                     </div>
                 </div>
 
                 <div id="more-information">
                     <div id="vertical-cover-holder">
-                        <img src=<%= movie.verticalCover%> alt="">
+                        <img src=<%= movie.image%> alt="">
                     </div>
                     <div id="sinopseContainer">
                         <div class="spacing"></div>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="sinopseText">
                             <p>
-                                <%=movie.synopsis%>
+                                <%=movie.description%>
                             </p>
                         </div>
                     </div>
