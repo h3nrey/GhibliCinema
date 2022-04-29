@@ -2,7 +2,6 @@
 const axios = require("axios");
 const express = require("express");
 const app = express();
-// const data = require("./moviedatabase")s
 const port  = process.env.PORT || 5000;
 const baseURL = "https://ghibliapi.herokuapp.com"
 
@@ -18,6 +17,9 @@ app.set("view engine", "ejs");
 // const routes = require("./src/routes")
 // app.use("/", routes);
 
+
+const othersMovies = require("./moviedatabase");
+ 
 //routes
 app.get("/", async(req,res) => {
     try {
@@ -34,7 +36,7 @@ app.get("/movie/:id", async(req,res) => {
     const movieID = req.params.id
     try {
         const data = await axios.get(`${baseURL}/films/${movieID}`);
-        const movie = await data.data;
+        movie = await data.data;
         res.render("moviePage", {movie:movie})
     } catch (error) {
         

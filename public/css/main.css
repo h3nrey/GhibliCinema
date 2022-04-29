@@ -35,7 +35,6 @@ body {
 }
 
 div .content {
-  height: 1600px;
   padding: 3rem 0 0 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
