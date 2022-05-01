@@ -28,6 +28,11 @@ body {
   font-size: 1.6rem;
 }
 
+.fluid {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
 #container {
   background: #3A3958;
   background-image: url("https://i.pinimg.com/originals/02/82/3c/02823cbfd3b547999b18a69cc0c1e6bb.gif");
@@ -76,80 +81,103 @@ main {
   overflow-y: hidden;
 }
 
-div .arrow-left, div .arrow-right {
-  position: absolute;
-  width: 4rem;
-  height: 46rem;
-  z-index: 90;
-  background-color: rgba(254, 252, 141, 0.6);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  -webkit-transition: all ease 0.4s;
-  transition: all ease 0.4s;
-}
-
-div .arrow-left img, div .arrow-right img {
-  width: 3rem;
-  height: 3rem;
-}
-
-div .arrow-left-horizontal, div .arrow-right-horizontal {
-  position: absolute;
-  width: 4rem;
-  height: 17rem;
-  z-index: 90;
-  background-color: rgba(254, 252, 141, 0.6);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  -webkit-transition: all ease 0.4s;
-  transition: all ease 0.4s;
-}
-
-div .arrow-left-horizontal img, div .arrow-right-horizontal img {
-  width: 3rem;
-  height: 3rem;
-}
-
-.arrow-left, .arrow-left-horizontal {
-  left: 2vw;
-}
-
-.arrow-right, .arrow-right-horizontal {
-  right: 0;
-}
-
-.cards :hover, .arrow-left {
-  opacity: 1;
-}
-
-.cards :hover, .arrow-left, .arrow-left-horizontal {
-  opacity: 1;
-}
-
 div .cards {
   margin-bottom: 3rem;
+  position: relative;
 }
 
 div .cards h2 {
   color: #FEFC8D;
+}
+
+.arrows__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.arrows {
+  z-index: 90;
+  position: absolute;
+  width: 4rem;
+  height: 100%;
+  background-color: rgba(254, 252, 141, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+.arrows img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.arrows:hover {
+  opacity: 1;
+}
+
+.arrow__right {
+  left: 97%;
+}
+
+.carousel__wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.carousel__wrapper .carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-auto-flow: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.carousel__wrapper .carousel .carousel__card {
+  width: 26rem;
+  height: 40rem;
+  border-radius: 2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.carousel__wrapper .carousel .carousel__card .carousel__card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.carousel__wrapper .carousel .carousel__card .carousel__card__image:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: 0 0 10px 5px rgba(245, 245, 245, 0.288);
+          box-shadow: 0 0 10px 5px rgba(245, 245, 245, 0.288);
+}
+
+.carousel__wrapper .carousel .carousel__card .carousel__card__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 #cardsArea {

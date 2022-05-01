@@ -4,10 +4,12 @@ $bg-color-primary: #3A3958;
 $bg-lighteen-color: #565580;
 
 @import 'base';
+@import 'usualClasses';
 @import 'container';
 @import 'main';
 @import 'arrows';
 @import 'cards';
+@import 'carousel';
 @import 'verticalCards';
 @import 'horizontalCards';
 @import 'header';

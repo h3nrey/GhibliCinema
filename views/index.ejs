@@ -11,25 +11,10 @@
                 <div class="cards">
                     <h2>Melhores Filmes</h2>
 
-                    <div class="arrow-left">
-                        <img src="assets/l-arrow.png">
-                        </div>
-    
-                        <div class="arrow-right">
-                            <img src="assets/r-arrow.png" alt="seta">
-                        </div>
+                    <%-include("./partials/carousel", {
+                        starredMovies: movies.filter(function (movie) { return movie.id == "ea660b10-85c4-4ae3-8a5f-41cea3648e3e" || movie.id == "ff24da26-a969-4f0e-ba1e-a122ead6c6e3" || movie.id == "0440483e-ca0e-4120-8c50-4c8cd9b965d6" || movie.id == "dc2e6bd1-8156-4886-adff-b39e6043af0c" || movie.id == "cd3d059c-09f4-4ff3-8d63-bc765a5184fa" || movie.id == "758bf02e-3122-46e0-884e-67cf83df1786" || movie.id == "578ae244-7750-4d9f-867b-f3cd3d6fecf4"})
+                    })%>
 
-                    <div class="cardsArea">
-                        <div class="VerticallList">
-                            <% movies.forEach((movie,i) => { %>
-                                <% if (i == 3 || i == 7 || i == 8 || i == 10 || i== 12 || i == 14 || i == 18) { %>
-                                    <a href=<%= `/movie/${movie.id}`%> class="VerticalCard">
-                                        <img src= <%= movie.image%>  alt= <%= movie.tittle%> >
-                                    </a>            
-                                <% } %>
-                            <% }) %>
-                        </div>
-                    </div>
                 </div>
                   
                 <div class="cards">
