@@ -30,11 +30,13 @@
 
 .arrow__right{
     left: 97%;
+    top: 0;
 }
 
 .carousel__wrapper{
     overflow-x: hidden;
     position: relative;
+    overflow-y: hidden;
 
     .carousel{
         display: flex;

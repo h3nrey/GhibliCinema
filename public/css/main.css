@@ -81,6 +81,15 @@ main {
   overflow-y: hidden;
 }
 
+main .movies__section {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+main .movies__section h2 {
+  color: #FEFC8D;
+}
+
 div .cards {
   margin-bottom: 3rem;
   position: relative;
@@ -133,11 +142,13 @@ div .cards h2 {
 
 .arrow__right {
   left: 97%;
+  top: 0;
 }
 
 .carousel__wrapper {
   overflow-x: hidden;
   position: relative;
+  overflow-y: hidden;
 }
 
 .carousel__wrapper .carousel {

@@ -2,70 +2,16 @@
     <div class="arrow__left arrows arrows__starred">
         <img src="assets/l-arrow.png">
     </div>
-    <div class="arrow__right arrows arrows__starred">
-        <img src="assets/r-arrow.png" alt="seta">
-    </div>
     <div class="carousel fluid">
         <%starredMovies.forEach(movie=> { %>
-            <a href=<%-`/movie/id${movie.id}`%> class="carousel__card card__vertical fluid">
+            <a href=<%-`/movie/${movie.id}`%> class="carousel__card card__vertical fluid">
                 <div class="carousel__card__image fluid">
                     <img class="fluid" src=<%= movie.image%> alt=<%= movie.tittle%>>
                 </div>
             </a>
-        <% }) %>
+            <% }) %>
+        </div>
+    <div class="arrow__right arrows arrows__starred">
+        <img src="assets/r-arrow.png" alt="seta">
     </div>
 </div>
-
-<script>
-    const carousel = document.querySelector("div.carousel");
-    const carouselCards = carousel.querySelectorAll(".carousel__card");
-    const cardsLength = carouselCards.length;
-    const cardSize = carouselCards[0].offsetWidth;
-    const cardsGap = 10;
-    const carouselSize = (cardsLength + 1) * cardSize + (cardsGap * cardsLength - 1);
-    carousel.style.width = `${carouselSize}px`;
-
-    //---MOVE CAROUSEL---//
-    const arrowLeft = document.querySelector("div.arrow__left");
-    const arrowRight = document.querySelector("div.arrow__right");
-    let clicks = 0;
-
-    arrowLeft.addEventListener("click", () => {
-        moveCarousel(1);
-        if(clicks > 0) clicks--;
-    })
-    arrowRight.addEventListener("click", () => {
-        moveCarousel(-1);
-        clicks++;
-    });
-
-    function moveCarousel(dir) {
-        let carouselMargin = carousel.style.marginLeft;
-        let carouselPos = carousel.offsetLeft;
-        let sizeGapped = cardSize + cardsGap; //size of the cards plus the gap between cards
-        let canMove;
-
-        console.log(clicks);
-
-        if(clicks >= (cardsLength - 4)) {
-            console.log("macacos");
-            carousel.style.marginLeft = "0px";
-            
-            canMove = true;
-            setTimeout(function() {
-                clicks = 0;
-            }, 500);
-        }
-
-        if(dir != -1 && carouselPos >= 0 || clicks >= (cardsLength - 4)) {
-            canMove = false;
-        } else canMove = true;
-        if(canMove) {
-            carousel.style.marginLeft = `${carouselPos + ((cardSize + cardsGap) * dir)}px`;
-        }
-
-        console.log(`carouselPos: ${carouselPos}, \n last child pos ${carouselCards[cardsLength - 1].offsetLeft} \n first child: ${carouselCards[0].offsetLeft}`)
-    }
-    
-
-</script>

@@ -28,7 +28,7 @@ app.get("/", async(req,res) => {
         // res.json(data.data)
         res.render("index", {movies:movies});
     } catch (error) {
-        
+        console.error(error);
     }
 })
 
@@ -39,7 +39,7 @@ app.get("/movie/:id", async(req,res) => {
         movie = await data.data;
         res.render("moviePage", {movie:movie})
     } catch (error) {
-        
+        console.error(error);
     }
 })
 
