@@ -58,8 +58,14 @@
                 position: relative;
 
                 &:hover{
-                    transform: scale(0.9);
                     box-shadow: 0 0 10px 5px rgba(245, 245, 245, 0.288);
+                    transform: scale(0.9);
+                    span.movie__description__wrapper{
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                    }
+
                 }
 
 
@@ -68,6 +74,30 @@
                     height: 100%;
                     border-radius: 0.5rem;
                     cursor: pointer;
+                }
+
+                span.movie__description__wrapper{
+                    height: 50%;
+                    top: 200%;
+                    z-index: 2;
+                    position: absolute;
+                    left: 0;
+                    text-align: center;
+                    width: 100%;
+                    border-radius: 0.5rem;
+                    display: inline-flex;
+                    align-items: flex-end;
+                    padding: 0 0.5rem 2.5rem 0.5rem;
+                    background: linear-gradient(0deg, rgba(86,85,128,1) 0%, rgba(86, 85, 128, 0.76) 35%, rgba(0,212,255,0) 100%);
+                    color: #f9f78c;
+
+                    .movie__description{
+                        height: 40%;
+                        width: 20%;
+                        display: contents;
+                        padding: 0.5rem;
+                        padding-top: 0;
+                    }
                 }
             }
         }
