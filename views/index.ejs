@@ -39,12 +39,48 @@
                         })
                     })%>                  
                 </section>
-
+                
             </main>
         </div>        
     </div>
 
     <script src="scripts/scrooll.js"></script>
     <script src="scripts/carouselBehaviour.js"></script>
+    <script src="https://kit.fontawesome.com/e9cc5f7524.js" crossorigin="anonymous"></script>
+    <script name="cutting description text">
+        const cardsDescriptions = document.querySelectorAll(".movie__description");
+        cardsDescriptions.forEach(description => {
+            const content = description.textContent.split(".");
+            description.innerHTML = content[0]; 
+        })
+    </script>
+    <script>
+        const cards = document.querySelectorAll(".carousel__card");
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+                const movieDetailsContainer = card.querySelector(".movie__detail__container")
+                document.querySelectorAll(".movie__detail__container").forEach(element => element.classList.add("hidden"));
+                movieDetailsContainer.classList.toggle("hidden");
+            })
+        })
+    </script>
+
+    <script>
+        const closeButton = document.querySelectorAll("button.close__button");
+        closeButton.forEach(button => {
+            button.addEventListener("click", () => {
+            console.log("Macacos");
+            const detailedModal = document.querySelectorAll(".movie__detail__container");
+            const cooldown = 500;
+            detailedModal.forEach(modal => {
+                modal.classList.add("vanishing");
+                setTimeout(() => {
+                    modal.classList.add("hidden");
+                    modal.classList.remove("vanishing");
+                }, cooldown);
+            })
+        })
+        })
+    </script>
 </body>
 </html>

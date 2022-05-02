@@ -4,11 +4,15 @@
     </div>
     <div class="carousel fluid">
         <%starredMovies.forEach(movie=> { %>
-            <a href=<%-`/movie/${movie.id}`%> class="carousel__card card__vertical fluid">
+            <div href=<%-`/movie/${movie.id}`%> class="carousel__card card__vertical fluid">
                 <div class="carousel__card__image fluid">
                     <img class="fluid" src=<%= movie.image%> alt=<%= movie.tittle%>>
+                    <span class="movie__description__wrapper fluid">
+                        <span class="movie__description fluid"><%-movie.description%></span>
+                    </span>
                 </div>
-            </a>
+                <%- include("./moveDetails", {movie:movie}) %>  
+            </div>
             <% }) %>
         </div>
     <div class="arrow__right arrows arrows__starred">

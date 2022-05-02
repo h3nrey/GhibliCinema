@@ -1,3 +1,19 @@
+.container__flex{
+    display: flex;
+}
+
+.justified__spaced{
+    justify-content: space-between;
+}
+
+.aligned__centered{
+    align-items: center;
+}
+
 .fluid{
     transition: all 400ms;
+}
+
+.borderless{
+    border: 0;
 }
