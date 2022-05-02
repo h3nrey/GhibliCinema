@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 // app.use("/", routes);
 
 
-const othersMovies = require("./moviedatabase");
+const movieLinks = require("./moviedatabase");
  
 //routes
 app.get("/", async(req,res) => {
@@ -48,7 +48,9 @@ app.get("/watch/:id", async(req,res) => {
     try {
         const data = await axios.get(`${baseURL}/films/${movieID}`);
         const movie = await data.data;
-        res.render("movieWatch", {movie:movie})
+        const movieLink = movieLinks.filter(link => link.id == movieID)[0];
+        console.log(movieLink[0])
+        res.render("movieWatch", {movie:movie, movieLink:movieLink})
     } catch (error) {
         
     }
