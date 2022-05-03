@@ -1,0 +1,61 @@
+@media (max-width: 1030px) {
+    .carousel__wrapper{
+
+        .carousel{
+
+            .carousel__card{
+                height: 33rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .container{
+        padding-left: 1rem;
+    }
+
+    header{
+        padding: 1rem;
+        #logo{
+            font-size: 3rem;
+        }
+
+        #menu{
+            margin-right: 0;
+            gap: 0.5rem;
+            a{
+                margin: 0;
+            }
+        }
+    }
+
+    main {
+        section{
+            h2{
+                font-size: 2rem;
+            }
+        }
+    }
+    .carousel__wrapper{
+
+        .carousel{
+
+            .carousel__card{
+                height: 14rem;
+
+                .carousel__card__image{
+                    span.movie__description__wrapper{   
+                        display:none;
+                    }
+                }
+
+            }
+
+            
+        }
+    }
+    .arrows{
+        opacity: 1;
+    }
+}
