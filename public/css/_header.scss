@@ -35,13 +35,14 @@ header {
         font-family: 'open sans', sans-serif;
         font-weight: 600;
         margin: 0 0.8em;
-        transition: 1000ms;
+        transition: 400ms;
+        will-change: transform;
     } 
 
     
 }
 
 #menu a:hover{
-    font-size: 4rem;
+    transform: scale(1.5) scaleX(1.1);
     color: $text-color-strong;
 }

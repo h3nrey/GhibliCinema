@@ -39,8 +39,9 @@
                         })
                     })%>                  
                 </section>
-                
+                <%- include("./partials/moveDetails") %> 
             </main>
+            <footer class="container__flex justified__centered">Made with a lot of love by <a href="https://github.com/h3nrey" target="blank" class="fluid">h3nrey</a></footer>
         </div>        
     </div>
 
@@ -54,28 +55,18 @@
             description.innerHTML = content[0]; 
         })
     </script>
-    <script>
-        const cards = document.querySelectorAll(".carousel__card");
-        cards.forEach(card => {
-            card.addEventListener("click", () => {
-                const movieDetailsContainer = card.querySelector(".movie__detail__container")
-                document.querySelectorAll(".movie__detail__container").forEach(element => element.classList.add("hidden"));
-                movieDetailsContainer.classList.toggle("hidden");
-            })
-        })
-    </script>
-
+    <script src="scripts/setupMovieDetailsModal.js"></script>
     <script>
         const closeButton = document.querySelectorAll("button.close__button");
         closeButton.forEach(button => {
             button.addEventListener("click", () => {
-            console.log("Macacos");
             const detailedModal = document.querySelectorAll(".movie__detail__container");
             const cooldown = 500;
             detailedModal.forEach(modal => {
                 modal.classList.add("vanishing");
                 setTimeout(() => {
                     modal.classList.add("hidden");
+                    modal.cloneNode(false)
                     modal.classList.remove("vanishing");
                 }, cooldown);
             })

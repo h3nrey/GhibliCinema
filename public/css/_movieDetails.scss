@@ -1,9 +1,8 @@
 .movie__detail__container{
-    position: fixed;
+    position: absolute;
     top: 50px;
     left: 50%;
     width: 40%;
-    height: 80vh;
     z-index: 2;
     animation: goUp 1000ms;
     transform: translateX(-50%);
@@ -18,7 +17,7 @@
 
     .banner__container{
         width: 100%;
-        height: 50%;
+        height: 20rem;
         border-radius: 2rem 2rem 0 0;
         background-size: cover;
         background-position: center;
@@ -30,7 +29,11 @@
 
                 i{
                     opacity: 1;
-                    transform: scale(1.5) rotateZ(0deg);
+                    transform: rotateZ(0deg);
+
+                    &:hover{
+                        transform: scale(1.2) rotateZ(0deg);
+                    }
                 }
             }
         }
@@ -51,7 +54,7 @@
                     font-size: 2.5rem;
                     color: $text-color-strong;
                     transition: all 800ms;
-                    transform: scale(1) rotateZ(-90deg);
+                    transform: scale(1) rotateZ(-270deg);
                 }
 
             }
@@ -97,6 +100,7 @@
     .movie__detail__content{
         color: $bg-lighteen-color;
         height: 50%;
+        min-height: 20rem;
         margin-top: 1rem;
         padding: 2rem;
         padding-top: 0;

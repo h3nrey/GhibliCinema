@@ -1,0 +1,14 @@
+footer{
+    color: $text-color-weak;
+    width: 100%;
+    gap: 0.5rem;
+    
+    a{
+        color: $text-color-strong;
+
+        &:hover{
+            color: $bg-lighteen-color;
+            filter: brightness(1.4);
+        }
+    }
+}

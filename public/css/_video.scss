@@ -21,12 +21,20 @@ div#video-container{
 
         a{
             color: $text-color-strong;
-            font-size: 5rem;
+            font-size: 3rem;
             font-weight: 900;
-        }
 
-        a:hover{
-            color: $bg-lighteen-color;
+            i{
+                animation: none;
+            }
+
+            &:hover{
+                color: $bg-lighteen-color;
+                filter: brightness(1.2);
+                i{
+                    animation: goLeft 400ms;
+                }
+            }
         }
     }
 
@@ -46,4 +54,16 @@ div#video-container{
   50%  {background-position-x: 50px;}
   75%  {background-position-x: 75px;}
   100% {background-position-x: 100px; }
+}
+
+@keyframes goLeft{
+    0%{
+        transform: translateX(200%) scaleX(1);;
+    }
+    80%{
+        transform: scaleX(0.7);
+    }
+    100%{
+        transform: translateX(0) scaleX(1);
+    }
 }
