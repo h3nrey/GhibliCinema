@@ -18,7 +18,7 @@
     opacity: 0;
     transition: all ease 0.4s;
 
-    img{
+    i{
         width: 3rem;
         height: 3rem;
     }
@@ -44,7 +44,7 @@
         flex-wrap: wrap;
         gap: 10px;
         .carousel__card{
-            width: 26rem;
+            // width: 26rem;
             height: 40rem;
             border-radius: 2rem;
             display: inline-block;

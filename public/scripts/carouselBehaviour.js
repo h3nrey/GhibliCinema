@@ -8,6 +8,22 @@ const carousels = document.querySelectorAll("div.carousel");
             carousel.style.width = `${carouselSize}px`;        
         })
     
+        window.addEventListener("resize", settingCardWidth)
+
+        function settingCardWidth() {
+            const carousels = document.querySelectorAll("div.carousel");
+            carousels.forEach(carousel => {
+                let carouselCards = carousel.querySelectorAll(".carousel__card");
+                carouselCards.forEach(card => {
+                    const parentWidth = carousel.parentElement.offsetWidth;
+                    card.style.width = `${parentWidth / 4.8}px`;
+                })
+            })
+        }
+
+        settingCardWidth();
+
+
         //---MOVE CAROUSEL---//
         const arrowsLeft = document.querySelectorAll("div.arrow__left");
         const arrowsRight = document.querySelectorAll("div.arrow__right");
