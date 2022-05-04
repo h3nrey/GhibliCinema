@@ -55,7 +55,38 @@
             
         }
     }
+
+    .movie__detail__container{
+        width: 100%;
+        z-index: 92;
+        transform: translateX(-51%);
+
+        .banner__container{
+            span{
+                height: 100%;
+
+                a{
+                    i{
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+    }
     .arrows{
         opacity: 1;
+        width: 2rem;
     }
+
+    .arrow__right{
+        left: 95%;
+    }
+
+    #video-holder{
+        width: 100%;
+        iframe{
+            width: 100vw;
+        }
+    }
+
 }

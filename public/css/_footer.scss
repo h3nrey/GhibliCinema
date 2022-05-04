@@ -1,14 +1,36 @@
 footer{
-    color: $text-color-weak;
+    color: $bg-color-primary;
     width: 100%;
     gap: 0.5rem;
+    background-color: $text-color-strong;
+    padding: 1rem;
     
     a{
-        color: $text-color-strong;
+        color: $bg-color-primary;
+        position: relative;
+        
+        &::before{
+            content: "";
+            position: absolute;
+            background-color: $bg-color-primary;
+            width: 0;
+            height: 100%;
+            transition: all 400ms;
+            color: yellow;
+            z-index: -1;
+            border-radius: 1rem;
+            padding: 0 1rem;
+        }
 
         &:hover{
-            color: $bg-lighteen-color;
-            filter: brightness(1.4);
+            color: yelow;
+            filter: brightness(0.9);
+            transform: translateX(10px);
+            color: $text-color-strong;
+            &::before{
+                width: 100%;
+                transform: translateX(-10px);
+            }
         }
     }
 }

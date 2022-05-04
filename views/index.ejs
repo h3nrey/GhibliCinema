@@ -6,7 +6,7 @@
     <div id="container">
         <div class="content">
             <%- include("./partials/header") %> 
-            <main>
+            <main class="container">
                 <section class="movies__section" id="movies__best">
                     <h2 class="section__legend">Best Movies</h2>
 
@@ -41,7 +41,7 @@
                 </section>
                 <%- include("./partials/moveDetails") %> 
             </main>
-            <footer class="container__flex justified__centered">Made with a lot of love by <a href="https://github.com/h3nrey" target="blank" class="fluid">h3nrey</a></footer>
+            <%- include("./partials/footer") %> 
         </div>        
     </div>
 
@@ -71,6 +71,20 @@
                 }, cooldown);
             })
         })
+        })
+    </script>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+
+            if(scrollY > 50) {
+                const header = document.querySelector("header");
+                header.style.backgroundColor = "#3A3958";
+            } else if(scrollY <= 50) {
+                const header = document.querySelector("header");
+                header.style.backgroundColor = "transparent";
+            }
         })
     </script>
 </body>

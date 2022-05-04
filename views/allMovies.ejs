@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %> 
+<body>
+    <%- include("./partials/header") %> 
+    <div id="container">
+        <div class="content">
+            <main class="container">
+                <div id="movies__grid">
+                    <% movies.forEach(movie => { %>
+                        <%- include("./partials/card", {movie:movie})%> 
+                    <% }) %>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

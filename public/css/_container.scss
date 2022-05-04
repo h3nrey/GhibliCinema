@@ -1,16 +1,18 @@
 #container{
-
     background: $bg-color-primary;
     background-image: url('https://i.pinimg.com/originals/02/82/3c/02823cbfd3b547999b18a69cc0c1e6bb.gif');
     background-size: 5%;
 }
 
 div .content{
-    padding: 3rem 0 0 6rem;
 
     display: flex;
     flex-direction: column;
     overflow:hidden;
+}
+
+.container{
+    padding-left: 3rem;
 }
 
 #bigCover{
