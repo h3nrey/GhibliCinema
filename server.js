@@ -32,16 +32,17 @@ app.get("/", async(req,res) => {
     }
 })
 
-app.get("/movie/:id", async(req,res) => {
-    const movieID = req.params.id
+app.get("/all", async(req,res) => {
     try {
-        const data = await axios.get(`${baseURL}/films/${movieID}`);
-        movie = await data.data;
-        res.render("moviePage", {movie:movie})
+        const data = await axios.get(`${baseURL}/films`)
+        const movies = await data.data
+        res.render("allMovies", {movies:movies});
     } catch (error) {
         console.error(error);
     }
 })
+
+
 
 app.get("/watch/:id", async(req,res) => {
     const movieID = req.params.id
