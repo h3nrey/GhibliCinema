@@ -23,4 +23,18 @@
   body {
     font-size: 1.6rem;
     position: relative;
+    &::-webkit-scrollbar {
+      width: 15px;     
+      padding: 0 2px;          /* width of the entire scrollbar */
+    }
+    &::-webkit-scrollbar-track{
+      background-color: $text-color-strong;
+    }
+  
+    &::-webkit-scrollbar-thumb{
+      background-color: $bg-lighteen-color;
+      filter: brightness(1.4);
+      width: 10px;
+      border-radius: 1rem;
+    }
   }

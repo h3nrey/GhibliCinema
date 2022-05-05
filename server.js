@@ -42,6 +42,16 @@ app.get("/all", async(req,res) => {
     }
 })
 
+app.get("/history", async(req,res) => {
+    try {
+        const data = await axios.get(`${baseURL}/films`)
+        const movies = await data.data
+        res.render("history");
+    } catch (error) {
+        console.error(error);
+    }
+})
+
 
 
 app.get("/watch/:id", async(req,res) => {
@@ -50,7 +60,6 @@ app.get("/watch/:id", async(req,res) => {
         const data = await axios.get(`${baseURL}/films/${movieID}`);
         const movie = await data.data;
         const movieLink = movieLinks.filter(link => link.id == movieID)[0];
-        console.log(movieLink[0])
         res.render("movieWatch", {movie:movie, movieLink:movieLink})
     } catch (error) {
         
