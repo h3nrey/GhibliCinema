@@ -5,7 +5,7 @@
 
 ![](Readm%20Assets/Watch%20movie%20trailer.png)
 ## **Sobre**
-Um site que exibe os filmes do estúdio de animação [Ghibli](https://ghiblicollection.com) consultando a [GhibliApi](https://ghibliapi.herokuapp.com), e monstrando seus trailers com o embed do Youtube.
+Um site que exibe os filmes do estúdio de animação [Ghibli](https://ghiblicollection.com) consultando a [GhibliApi](https://ghibliapi.herokuapp.com), e mostra seus trailers com o iframe do Youtube.
  
 ## **Tecnologias**
 Esse projeto foi desenvolvido com as seguintes tecnologias:
