@@ -16,9 +16,9 @@
     }
 
     header{
-        padding: 1rem;
-        #logo{
-            font-size: 3rem;
+        padding: 1rem !important;
+        #Logo{
+            font-size: 1.5rem;
         }
 
         #menu{
@@ -26,6 +26,7 @@
             gap: 0.5rem;
             a{
                 margin: 0;
+                font-size: 1.2rem;
             }
         }
     }
@@ -75,11 +76,11 @@
     }
     .arrows{
         opacity: 1;
-        width: 2rem;
+        width: 2.5rem;
     }
 
     .arrow__right{
-        left: 95%;
+        left: 91.8%;
     }
 
     #video-holder{
